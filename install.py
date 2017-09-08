@@ -1,7 +1,6 @@
 #!/bin/sh
 sudo cp -rf sources.list /etc/apt/sources.list
 sudo apt-get update
-sudo git clone https://github.com/mylanch/configuration.git
 sudo chsh -s /bin/zsh
 sudo apt-get -y install curl
 curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-ce/internet | sh -
