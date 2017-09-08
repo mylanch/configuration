@@ -3,6 +3,7 @@ sudo cp -rf sources.list /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get -y install vim
 sudo cp -rf .vim .oh-my-zsh .vimrc .zshrc ~
+sudo apt-get -y install zsh
 sudo chsh -s /bin/zsh
 sudo apt-get -y install curl
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
