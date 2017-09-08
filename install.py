@@ -20,4 +20,4 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 sudo apt-get -y install openssh-server
 sudo service ssh start 
-sudo apt-get -y install tree"
+sudo apt-get -y install tree
