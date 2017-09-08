@@ -1,9 +1,14 @@
 #!/bin/sh
 sudo cp -rf sources.list /etc/apt/sources.list
 sudo apt-get update
+sudo cp -rf .vim .oh-my-zsh .vimrc .zshrc ~
 sudo chsh -s /bin/zsh
 sudo apt-get -y install curl
-curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-ce/internet | sh -
+sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu
+$(lsb_release -cs)
+sudo apt-get -y install docker-ce
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
@@ -14,4 +19,4 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 sudo apt-get -y install openssh-server
 sudo service ssh start 
-sudo apt-get -y install tree
+sudo apt-get -y install tree"
