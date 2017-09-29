@@ -1,5 +1,5 @@
 # Created by newuser for 5.1.1
-export ZSH=/home/lanch/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 ZSH_THEME="awesomepanda"
 source $ZSH/oh-my-zsh.sh
 plugins=(git autojump)
